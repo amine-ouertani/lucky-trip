@@ -1,0 +1,50 @@
+<div class="hero" [style.background-image]="'url(' + destination?.thumbnail.image_url + ')'">
+  <div class="header-results">
+    <img class="logo" src="/assets/img/LuckyTrip_Logo_Small.png" alt="">
+    <div class="search-box">
+      <img src="/assets/img/magnifying_glass_large.png" alt="">
+      <input type="text" placeholder="Search..." name="keyword" [(ngModel)]="this.keyword">
+      <button class="search-btn" (click)="search()">GO</button>
+    </div>
+  </div>
+  <div class="hero-content">
+
+    <h1 class="city">{{ destination?.city }}</h1>
+    <p class="country">{{ destination?.country_name }}</p>
+  </div>
+</div>
+<section class="section-results container">
+  <h2 class="desc-title">What’s it like?</h2>
+  <p class="desc-paragraph">{{ destination?.description.text }}</p>
+  <h2 class="results-title">Blog posts</h2>
+  <div class="results-container">
+
+    <div class="img-result" style="height: 250px;">
+      <!-- <img src="" alt=""> -->
+    </div>
+    <div class="img-result" style="height: 250px;">
+      <!-- <img src="" alt=""> -->
+    </div>
+    <div class="img-result" style="height: 250px;">
+      <!-- <img src="" alt=""> -->
+    </div>
+    <div class="img-result" style="height: 250px;">
+      <!-- <img src="" alt=""> -->
+    </div>
+    <div class="img-result" style="height: 250px;">
+      <!-- <img src="" alt=""> -->
+    </div>
+    <div class="img-result" style="height: 250px;">
+      <!-- <img src="" alt=""> -->
+    </div>
+  </div>
+</section>
+<section class="find-trip">
+  <h2 class="find-trip-title">
+    Find a trip to Rome
+  </h2>
+  <p class="find-trip-desc">
+    Tap the Lucky button to get started…
+  </p>
+  <img src="/assets/img/lucky_button.png" alt="">
+</section>

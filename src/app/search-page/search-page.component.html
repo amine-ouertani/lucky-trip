@@ -1,0 +1,21 @@
+<div class="header">
+  <img src="/assets/img/LuckyTrip_Logo_Small.png" alt="">
+  <section class="section-search">
+    <h1 class="search-title">Search Luckytrip</h1>
+    <p class="search-desc">350 destinations, 1500 blog posts, Unlimited Trips</p>
+    <div class="search-box">
+      <img src="/assets/img/magnifying_glass_large.png" alt="">
+      <input type="text" placeholder="Enter a Destination..." name="keyword" [(ngModel)]="keyword">
+      <button class="search-btn" (click)="search()">GO</button>
+    </div>
+  </section>
+</div>
+<section class="section-results container">
+  <h2 class="results-title">Trending</h2>
+  <div class="results-container">
+
+    <div class="img-result" *ngFor="let result of results; let index = index" >
+      <img src="{{result.image_url}}" alt="" (click)="displayResult(result.id)">
+    </div>
+  </div>
+</section>
